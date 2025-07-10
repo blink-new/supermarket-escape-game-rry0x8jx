@@ -21,6 +21,7 @@ const SHOPPING_LIST = [
   { id: 'cheese', name: 'Cheese', emoji: '🧀', aisle: 'Dairy' },
   { id: 'tomatoes', name: 'Tomatoes', emoji: '🍅', aisle: 'Produce' },
   { id: 'pasta', name: 'Pasta', emoji: '🍝', aisle: 'Pantry' },
+  { id: 'bat', name: 'Baseball Bat', emoji: '🏏', aisle: 'Toys' }, // 10th item
   { id: 'bananas', name: 'Bananas', emoji: '🍌', aisle: 'Produce' },
   { id: 'yogurt', name: 'Yogurt', emoji: '🥛', aisle: 'Dairy' },
   { id: 'cereal', name: 'Cereal', emoji: '🥣', aisle: 'Pantry' },
@@ -32,11 +33,11 @@ const SUPERMARKET_AISLES = [
   { name: 'Meat', color: 'bg-red-500', items: ['chicken'] },
   { name: 'Bakery', color: 'bg-yellow-500', items: ['bread'] },
   { name: 'Pantry', color: 'bg-purple-500', items: ['rice', 'pasta', 'cereal'] },
+  { name: 'Toys', color: 'bg-pink-500', items: ['bat'] }, // New Toys aisle
 ]
 
 export default function SupermarketGame({ onItemCollected, collectedItems }: SupermarketGameProps) {
   const [selectedAisle, setSelectedAisle] = useState<string | null>(null)
-
 
   const handleItemClick = (item: { id: string; name: string }) => {
     if (collectedItems.includes(item.id)) return
@@ -97,7 +98,7 @@ export default function SupermarketGame({ onItemCollected, collectedItems }: Sup
                 <motion.div
                   initial={{ opacity: 0, y: 10 }}
                   animate={{ opacity: 1, y: 0 }}
-                  className="text-center text-sm text-amber-600 font-medium"
+                  className="text-center text-amber-600 font-medium"
                 >
                   ⚠️ You feel a strange presence watching you...
                 </motion.div>
