@@ -128,7 +128,7 @@ export default function BunkerGame({ onKeyFound, foundKeys }: BunkerGameProps) {
           <CardHeader className="pb-3">
             <div className="flex items-center justify-between">
               <div className="flex items-center gap-3">
-                <div className="w-10 h-10 bg-red-600 rounded-full flex items-center justify-center">
+                <div className="w-10 h-10 bg-emerald-600 rounded-full flex items-center justify-center">
                   <Lock className="w-5 h-5 text-white" />
                 </div>
                 <div>
@@ -194,7 +194,7 @@ export default function BunkerGame({ onKeyFound, foundKeys }: BunkerGameProps) {
                       <Card
                         className={`cursor-pointer transition-all duration-200 ${
                           currentRoom === room.id
-                            ? 'ring-2 ring-red-500 bg-red-900/30'
+                            ? 'ring-2 ring-emerald-500 bg-emerald-900/30'
                             : searchedRooms.includes(room.id)
                             ? 'bg-stone-700/50'
                             : 'bg-stone-800/50 hover:bg-stone-700/50'
